@@ -32,7 +32,7 @@ def muestra(a, b, n):
 def metodo_montecarlo(a, b, n, opcion=1):
     x = muestra(a, b, n)
     y = f(x, opcion)
-    integral = (np.pi/2)*(b - a) / n * np.sum(y)
+    integral = (2/np.pi)*(b - a) / n * np.sum(y)
     return x, y, integral
 
 # --- Botón para ejecutar ---
