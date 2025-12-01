@@ -32,13 +32,13 @@ def muestra(a, b, n):
 def metodo_montecarlo(a, b, n, opcion=1):
     x = muestra(a, b, n)
     y = f(x, opcion)
-    integral = (b - a) / n * np.sum(y)
+    integral = (np.pi/2)*(b - a) / n * np.sum(y)
     return x, y, integral
 
 # --- Botón para ejecutar ---
 if st.sidebar.button("Ejecutar Montecarlo"):
     x, y, integral = metodo_montecarlo(a, b, n, opcion)
-    areas = (b - a) / n * y
+    areas = (np.pi/2)*(b - a) / n * y
 
     # Tabla de resultados
     tabla = pd.DataFrame({
