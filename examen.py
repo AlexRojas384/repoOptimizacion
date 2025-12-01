@@ -11,6 +11,12 @@ a = st.sidebar.number_input("Límite inferior a", value=-6.0)
 b = st.sidebar.number_input("Límite superior b", value=6.0)
 n = st.sidebar.number_input("Número de muestras n", min_value=1, value=50, step=1)
 opcion = st.sidebar.radio("Seleccione función f(x):", ("Opción a", "Opción b"))
+if opcion == "Opción a":
+    st.markdown("Función seleccionada:")
+    st.latex(r"f(x) = \frac{1}{e^x + e^{-x}}")
+else:
+    st.markdown("Función seleccionada:")
+    st.latex(r"f(x) = \frac{2}{e^x + e^{-x}}")
 opcion = 1 if opcion == "Opción a" else 2
 
 # --- Funciones ---
