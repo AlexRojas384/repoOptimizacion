@@ -78,7 +78,7 @@ if st.button("Ejecutar simulación"):
             datos_excel=datos_excel
         )
 
-        st.success("Simulación completada 🎉")
+        st.success("Simulación completada")
         st.write(f"**Media estimada (x̂):** {media:.2f}")
         st.write(f"**Desviación estándar (σ):** {desv:.2f}")
 
